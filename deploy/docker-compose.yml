@@ -1,6 +1,6 @@
 services:
   client:
-    build: .
+    image: faizms14/sio-client:latest
     container_name: sio-app-client
     networks:
       - proxy_net

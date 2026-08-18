@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8088';
+const API_URL = 'https://sioms.faizms.com';
 
 export async function apiRequest(path, options = {}) {
   const token = localStorage.getItem('access_token');
