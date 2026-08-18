@@ -51,6 +51,6 @@ jobs:
                 username: ${{ secrets.SSH_USER }}
                 key: ${{ secrets.SSH_PRIVATE_KEY }}
                 script: |
-                  cd /home/faizms14/project/sioms/client-service
+                  cd /home/faizms14/project/sioms/client-service/deploy
                   docker compose pull
                   docker compose up -d
