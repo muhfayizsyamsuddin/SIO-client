@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { apiRequest } from '../api/client';
+import { apiRequest, API_URL } from '../api/client';
 
 function formatRupiah(price) {
   return new Intl.NumberFormat('id-ID', {
@@ -73,7 +73,7 @@ function OrdersPage() {
           const token = localStorage.getItem('access_token');
           
           const response = await fetch(
-              `http://localhost:8088/orders/${orderId}/pdf`,
+              `${API_URL}/orders/${orderId}/pdf`,
         {
             headers: {
                 Authorization: `Bearer ${token}`,
